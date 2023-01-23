@@ -1,7 +1,7 @@
 import tkinter as tk
 window = tk.Tk()
 window.geometry('500x500')
-window.title('Basic Calculater')
+window.title('Compound Interest')
 p = tk.IntVar()
 r = tk.IntVar()
 n = tk.IntVar()
@@ -45,7 +45,7 @@ def halfyearly():
     amount=a.get()
     comp=amount-principle
     ci.set(comp)
-def cancle():
+def cancel():
     p.set(' ')
     r.set(' ')
     n.set(' ')
@@ -55,6 +55,6 @@ btn1=tk.Button(window,text='annually',command=annually)
 btn1.place(x=100,y=300)
 btn2=tk.Button(window,text='yearly',command=halfyearly)
 btn2.place(x=180,y=300)
-btn3=tk.Button(window,text='cancle',command=cancle)
+btn3=tk.Button(window,text='cancel',command=cancel)
 btn3.place(x=250,y=300)
 window.mainloop()
